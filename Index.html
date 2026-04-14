@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DermaRepair</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:Poppins;
+    background:#f7f7f7;
+    color:#111;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 40px;
+    background:white;
+    position:sticky;
+    top:0;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav h1{
+    font-size:1.2em;
+}
+
+nav a{
+    margin-left:20px;
+    text-decoration:none;
+    color:#333;
+}
+
+.hero{
+    padding:80px 40px;
+}
+
+.hero h2{
+    font-size:3em;
+}
+
+.hero p{
+    margin-top:15px;
+    color:#555;
+}
+
+section{
+    padding:60px 40px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    cursor:pointer;
+    transition:0.3s;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    width:100%;
+    height:140px;
+    object-fit:cover;
+}
+
+.card h3{
+    padding:10px;
+}
+
+.info{
+    margin-top:30px;
+    padding:20px;
+    background:#e8f5e9;
+    border-left:5px solid #2e7d32;
+    border-radius:10px;
+    font-weight:500;
+}
+
+.benefits{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.benefit{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.text{
+    color:#444;
+    line-height:1.7;
+    max-width:800px;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#777;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <h1>DermaRepair</h1>
+    <div>
+        <a href="#info">Información</a>
+        <a href="#ingredientes">Ingredientes</a>
+        <a href="#beneficios">Beneficios</a>
+        <a href="#proceso">Proceso</a>
+    </div>
+</nav>
+
+<div class="hero">
+    <h2>Cuida tu piel de forma natural</h2>
+    <p>DermaRepair es una crema regeneradora que hidrata, protege y mejora la piel con ingredientes naturales.</p>
+</div>
+
+<section id="info">
+    <h2>¿Qué es DermaRepair?</h2>
+    <p class="text">
+        DermaRepair es una crema natural diseñada para el cuidado de la piel. Su fórmula combina ingredientes con propiedades hidratantes,
+        regeneradoras y protectoras. Este proyecto busca ofrecer una alternativa accesible y saludable frente a productos comerciales con químicos agresivos.
+    </p>
+
+    <h2>Objetivo</h2>
+    <p class="text">
+        Desarrollar una crema natural que ayude a mejorar la salud de la piel mediante el uso de ingredientes seguros, económicos y efectivos.
+    </p>
+</section>
+
+<section id="ingredientes">
+    <h2>Ingredientes</h2>
+
+    <div class="grid">
+        <div class="card" onclick="mostrar('karite')">
+            <img src="manteca.jpg">
+            <h3>Manteca de karité</h3>
+        </div>
+
+        <div class="card" onclick="mostrar('aloe')">
+            <img src="aloe.jpg">
+            <h3>Aloe vera</h3>
+        </div>
+
+        <div class="card" onclick="mostrar('cera')">
+            <img src="cera de abeja.jpg">
+            <h3>Cera de abeja</h3>
+        </div>
+
+        <div class="card" onclick="mostrar('glicerina')">
+            <img src="glicerina.jpg">
+            <h3>Glicerina vegetal</h3>
+        </div>
+
+        <div class="card" onclick="mostrar('vitamina')">
+            <img src="eee.jpg">
+            <h3>Vitamina E</h3>
+        </div>
+
+        <div class="card" onclick="mostrar('vainilla')">
+            <img src="vainilla.jpg">
+            <h3>Esencia de vainilla</h3>
+        </div>
+    </div>
+
+    <div id="infoBox" class="info">Haz click en un ingrediente 👆</div>
+</section>
+
+<section id="beneficios">
+    <h2>Beneficios</h2>
+
+    <div class="benefits">
+        <div class="benefit">💧 Hidratación profunda</div>
+        <div class="benefit">✨ Regeneración de la piel</div>
+        <div class="benefit">🛡️ Protección contra resequedad</div>
+        <div class="benefit">🌟 Mejora la textura</div>
+    </div>
+</section>
+
+<section id="proceso">
+    <h2>Proceso de elaboración</h2>
+    <p class="text">
+        1. Derretir la cera de abeja y la manteca de karité a baño maría.<br>
+        2. Agregar el aloe vera y la glicerina vegetal.<br>
+        3. Mezclar constantemente hasta obtener una textura homogénea.<br>
+        4. Añadir vitamina E y esencia de vainilla.<br>
+        5. Verter en el envase y dejar enfriar.
+    </p>
+
+    <h2>Resultados esperados</h2>
+    <p class="text">
+        Se espera obtener una crema con textura suave que hidrate profundamente la piel, mejore su apariencia y la proteja de la resequedad.
+    </p>
+
+    <h2>Advertencias</h2>
+    <p class="text">
+        Uso externo. Evitar contacto con los ojos. Suspender su uso en caso de irritación.
+    </p>
+</section>
+
+<footer>
+    DermaRepair — Proyecto de Alessandro Rangel
+</footer>
+
+<script>
+function mostrar(tipo){
+    const info = document.getElementById("infoBox");
+
+    if(tipo==="karite"){
+        info.innerText="Hidrata profundamente y regenera la piel.";
+    }
+    if(tipo==="aloe"){
+        info.innerText="Calma la piel y reduce irritaciones.";
+    }
+    if(tipo==="cera"){
+        info.innerText="Protege la piel formando una barrera natural.";
+    }
+    if(tipo==="glicerina"){
+        info.innerText="Mantiene la piel hidratada por más tiempo.";
+    }
+    if(tipo==="vitamina"){
+        info.innerText="Ayuda a reparar la piel y es antioxidante.";
+    }
+    if(tipo==="vainilla"){
+        info.innerText="Aporta aroma y sensación agradable.";
+    }
+}
+</script>
+
+</body>
+</html>
